@@ -1,0 +1,520 @@
+* {
+  position: relative;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  position: relative;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  font-size: 10px;
+  overflow-y: auto;
+  background: linear-gradient(165deg, #d0e1ed, #056379, #055379, #033249, #011118);
+  background-size: 600% 600%;
+  -webkit-animation: deepdive 120s ease infinite;
+  -moz-animation: deepdive 120s ease infinite;
+  -o-animation: deepdive 120s ease infinite;
+  animation: deepdive 120s ease infinite;
+}
+
+/* Animation rules for background */
+
+@-webkit-keyframes deepdive {
+    0%{background-position:0% 2%}
+    50%{background-position:100% 99%}
+    100%{background-position:0% 2%}
+}
+@-moz-keyframes deepdive {
+    0%{background-position:0% 2%}
+    50%{background-position:100% 99%}
+    100%{background-position:0% 2%}
+}
+@-o-keyframes deepdive {
+    0%{background-position:0% 2%}
+    50%{background-position:100% 99%}
+    100%{background-position:0% 2%}
+}
+@keyframes deepdive {
+    0%{background-position:0% 2%}
+    50%{background-position:100% 99%}
+    100%{background-position:0% 2%}
+}
+
+/* Header: Blue + Black bars */
+
+.blackbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3.0rem;
+  width: 100%;
+  background-color: #000;
+  animation: 1s ease-out 0s 1 theRightSlide;
+  z-index: 1;
+}
+
+.bluebar {
+  position: fixed;
+  top: 3.0rem;
+  left: 0;
+  height: 1.5rem;
+  width: 100%;
+  background-color: #68aadf;
+  box-shadow: 0 5px 8px 0 #2c3d45;
+  animation: 1s ease-out 0s 1 theLeftSlide;
+  z-index: 1;
+}
+
+/* animation for blue, black, and link bars */
+
+@keyframes theLeftSlide {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes theRightSlide {
+  0% {
+    transform: translateX(200%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Top navigation menu on blue header bar */
+
+.linkbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  outline: none !important;
+  animation: 3s ease-in 0s 1 fadeIn;
+  z-index: 1;
+}
+
+.linkbar ul {
+  display: inline-block;
+  list-style: none;
+  outline: none !important;
+  width: 100%;
+  min-width: 350px;
+  margin-left: 0.5rem;
+  font-style: 'Ubuntu', sans-serif;
+  text-transform: uppercase;
+  font-size: 2rem;
+  color: rgb(205, 205, 215);
+}
+
+.linkbar li {
+  display: inline-block;
+  width: 15rem;
+  height: 3rem;
+  margin-right: 2.0rem;
+  outline: none !important;
+  font-family: 'Ubuntu', sans-serif;
+  cursor: pointer;
+}
+
+.linkbar li:hover {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  background-color: rgb(205, 205, 215);
+  color: #000;
+}
+
+.linkbar a {
+  text-decoration: none;
+  color: rgb(205, 205, 215);
+}
+
+.material-icons.arrow {
+  margin: -0.5rem 0;
+  font-size: 1.5rem;
+}
+
+/* Nested list for top drop-down navigation */
+
+.linkbar li ul {
+  position: absolute;
+  display: none;
+  min-width: 0;
+  margin: 0;
+  text-align: left;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.linkbar li ul li {
+  display: block;
+  width: 15rem;
+  margin: 0;
+  padding-left: 1rem;
+  background-color: #000;
+  box-shadow: none;
+  text-transform: none;
+}
+
+.linkbar li ul li:hover {
+  font-size: 1.8rem;
+  line-height: 2.8rem;
+  border-right: 0.5rem solid rgb(205, 205, 215);
+  border-left: 0.5rem solid rgb(205, 205, 215);
+  background-color: #000;
+  color: rgb(205, 205, 215);
+}
+
+#dropdown_roundend {
+  height: 1rem;
+  font-size: 0.5rem;
+  text-transform: none;
+  border-radius: 0 0 10px 10px;
+  background-color: rgb(205, 205, 215);
+  color: rgb(205, 205, 215);
+}
+
+/* Top navigation media queries for smaller screens */
+
+@media only screen and (max-width: 799px) {
+  .linkbar ul {
+    font-size: 2.0rem;
+  }
+}
+
+@media only screen and (max-width: 549px) {
+    .linkbar ul {
+      font-size: 1.5rem;
+    }
+    .linkbar a {
+      margin-top: 2%;
+    }
+}
+
+/* Welcome text below top navigation bar */
+
+.welcome {
+  margin: 0 auto;
+  min-width: 30rem;
+  font-family: 'Baloo Tammudu', cursive;
+  font-size: 4rem;
+  color: rgb(205, 205, 215);
+}
+
+/* Main content display box */
+
+.content {
+  top: 9.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 60%;
+  min-width: 60rem;
+  min-height: 40rem;
+  height: 60rem;
+  margin: 0 auto;
+  border: 2px solid rgb(215, 215, 225);
+  border-radius: 15px;
+  background-color: rgb(0, 0, 0);
+  box-shadow: 0 0 10px 5px #000;
+  overflow-y: hidden;
+  animation: 4s ease-out 0s 1 dropDownBounce;
+}
+
+.content h2 {
+  margin: 0 auto -4rem auto;
+}
+
+.content p {
+  margin: 0 auto 2% auto;
+  min-width: 20rem;
+  max-width: 60%;
+  text-align: justify;
+  line-height: 2.5rem;
+  font-family: 'Ubuntu', sans-serif;
+  color: rgb(205, 205, 215);
+}
+
+.content img {
+  display: block;
+  margin: 0 auto 2% auto;
+  height: auto;
+  width: 60%;
+  min-width: 20rem;
+  border: 2px solid rgb(205, 205, 215);
+  border-radius: 10px;
+}
+
+.content a {
+  display: block;
+  text-decoration: none;
+  color: #FFF;
+}
+
+/* animation for content box on load */
+
+@keyframes dropDownBounce {
+  0% {
+    transform: translateY(-200%);
+  }
+  80% {
+    transform: translateY(-2%)
+  }
+  90% {
+    transform: translateY(-3%)
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+/* Left side of content box, for links */
+
+.linksdisplaycontent {
+  min-width: 200px;
+  min-height: 100px;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  border-radius: 15px;
+  text-align: center;
+  font-size: 5rem;
+  font-family: 'Libre Barcode 39 Text', cursive;
+  color: rgb(0, 153, 0);
+  box-shadow: inset 0 0 10px #000;
+  background-image: url('../assets/Pictures/terminal.jpg');
+  background-size: cover;
+  -webkit-animation: terminal 20s linear infinite alternate;
+  -moz-animation: terminal 20s linear infinite alternate;
+  -o-animation: terminal 20s linear infinite alternate;
+  animation: terminal 20s linear infinite alternate;
+}
+
+/* Animation rules for linksdisplaycontent */
+
+@-webkit-keyframes terminal {
+    from { background-position: 0 0; }
+	  to { background-position: 0 100%; }
+}
+@-moz-keyframes terminal {
+    from { background-position: 0 0; }
+	  to { background-position: 0 100%; }
+}
+@-o-keyframes terminal {
+    from { background-position: 0 0; }
+	  to { background-position: 0 100%; }
+}
+@keyframes terminal {
+    from { background-position: 0 0; }
+	  to { background-position: 0 100%; }
+}
+
+.linkscontent {
+  flex: 1;
+  margin: 1rem 1%;
+  min-width: 200px;
+}
+
+.linkscontent li {
+  list-style: none;
+  margin-top: 4%;
+  line-height: 2;
+  font-size: 2.0rem;
+  color: rgb(205, 205, 215);
+  background-color: #000;
+  border: 2px solid rgb(205, 205, 215);
+  border-radius: 15px;
+}
+
+.linkscontent li:hover {
+  background-color: rgb(205, 205, 215);
+  border-radius: 0;
+  color: #000;
+}
+
+/* Right side of content box, for information */
+
+.infocontent {
+  flex: 2;
+  height: 96%;
+  margin: 1rem 1% 2rem 0;
+  border-radius: 15px;
+  overflow-y: auto;
+  background-color: rgb(200, 200, 200);
+  box-shadow: inset 0 0 10px #000;
+}
+
+.infocontent p {
+  margin: 2.5rem auto 2.5rem auto;
+  color: #000;
+}
+
+.infocontent a {
+  color: rgb(130, 79, 140);
+}
+
+.infocontent img {
+  margin-top: 2rem;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+
+.infocontent ul {
+  display: inline-block;
+  width: 60%;
+  margin-top: 0;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 1.8rem;
+  line-height: 2rem;
+  color: #000;
+}
+
+.infocontent li {
+  margin-top: 1rem;
+  text-align: justify;
+}
+
+.infocontent li:hover {
+  color: #111;
+}
+
+/* to resize the image on the taxonomy page */
+
+#taxonomytree {
+  width: auto;
+  height: 50rem;
+}
+
+/* to resize image on the cetacea page */
+
+#cetaceanorder {
+  width: 35rem;
+  height: auto;
+  background-color: rgb(215, 215, 225);
+}
+
+/* credit text for images */
+
+.imagecredit {
+  font-size: 1.5rem;
+  font-style: italic;
+  line-height: 1rem;
+}
+
+/* The Modal */
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(215, 215, 225, 0.9);
+}
+
+.modal p {
+  margin: 0 auto 5rem auto;
+  min-width: 20rem;
+  max-width: 60%;
+  text-align: center;
+  line-height: 5rem;
+  font-family: 'Ubuntu', sans-serif;
+  color: rgb(5, 5, 15);
+}
+
+.modal img {
+  display: block;
+  margin: 0 auto;
+  height: auto;
+  width: 100%;
+  min-width: 20rem;
+  border: 2px solid rgb(5, 5, 15);
+  border-radius: 10px;
+  transition: 0.3s;
+  cursor: default;
+}
+
+.modal img:hover {
+  opacity: 1;
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  margin: auto;
+  padding: 0;
+  width: 90%;
+}
+
+/* The Close Button */
+.close {
+  color: rgb(5, 5, 15);
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Links move down 2px on click */
+
+a:active {
+  top: 2px;
+}
+
+/* Common selector stylings below */
+
+h1 {
+  font-size: 5.0rem;
+  line-height: 1.1;
+}
+
+p {
+  font-size: 2.0rem;
+}
+
+img {
+  cursor: pointer;
+}
+
+img:hover {
+  opacity: 0.7;
+}
+
+/* Media queries for common selectors */
+
+@media only screen and (max-width: 799px) {
+  h1 {
+    font-size: 4.0rem;
+  }
+
+  p {
+    font-size: 1.8rem;
+  }
+}
