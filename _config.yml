@@ -22,7 +22,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://shanesfast.github.io/ponderthewhale/" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: none
 github_username:  shanesfast
-repository: shanesfast/shanesfast.github.io
+repository: shanesfast/ponderthewhale
 github: [metadata]
 
 # Build settings
