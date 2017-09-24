@@ -2,29 +2,36 @@
 
 // loads the welcome content
 $(document).ready(function() {
-  $(".towelcome").click(function() {
+  $(".to_welcome").click(function() {
     $(".content").load("pages/welcome.html");
     } );
 });
 
 // loads the taxonomy facts section
 $(document).ready(function() {
-  $(".totaxonomy").click(function() {
+  $(".to_taxonomy").click(function() {
     $(".content").load("pages/taxonomy.html");
     });
 });
 
 // loads the cetacea order content
 $(document).ready(function() {
-  $(".tocetacea").click(function() {
+  $(".to_cetacea").click(function() {
     $(".content").load("pages/cetacea.html");
     });
 });
 
 // loads the mysticeti content
 $(document).ready(function() {
-  $(".tomysticeti").click(function() {
+  $(".to_mysticeti").click(function() {
     $(".content").load("pages/mysticeti.html");
+    });
+});
+
+// loads the odontoceti content
+$(document).ready(function() {
+  $(".to_odontoceti").click(function() {
+    $(".content").load("pages/odontoceti.html");
     });
 });
 

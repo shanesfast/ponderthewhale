@@ -353,6 +353,8 @@ body {
   flex: 2;
   height: 96%;
   margin: 1rem 1% 2rem 0;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
   border-radius: 15px;
   overflow-y: auto;
   background-color: rgb(200, 200, 200);
@@ -360,7 +362,7 @@ body {
 }
 
 .infocontent p {
-  margin: 2.5rem auto 2.5rem auto;
+  margin: 0 auto 1rem auto;
   color: #000;
 }
 
@@ -369,7 +371,6 @@ body {
 }
 
 .infocontent img {
-  margin-top: 2rem;
   border: 2px solid black;
   border-radius: 10px;
 }
@@ -414,6 +415,10 @@ body {
   font-size: 1.5rem;
   font-style: italic;
   line-height: 1rem;
+}
+
+.imagecredit a {
+  margin-bottom: 1rem;
 }
 
 /* The Modal */
