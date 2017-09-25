@@ -41,30 +41,37 @@ $(document).ready(function() {
 $(document).ready(function() {
   $(".facts")
     .click(function() {
-      $(".material-icons.arrow").html("keyboard_arrow_down")
-      $(".factsdropdown").slideDown()
+      $(".material-icons.arrow").html("keyboard_arrow_down");
+      $(".factsdropdown").fadeIn(300);
     })
     .mouseleave(function() {
-      $(".material-icons.arrow").html("keyboard_arrow_up")
-      $(".factsdropdown").slideUp()
-    });
+      $(".material-icons.arrow").html("keyboard_arrow_up");
+      $(".factsdropdown").fadeOut();
+    })
 });
 
 /* MODAL IMAGE VIEWER */
 
 $(document).ready(function() {
-  $(".capt").click(function() {
-    var nodes = document.getElementsByClassName("capt");
-    var spot = $(this).attr("value");
-    var setImg = document.getElementById("setImg");
-    var subTitle = document.getElementById("subtitle");
+  $(".capt").click(function(e) {
+    const nodes = document.getElementsByClassName("capt");
+    const spot = $(this).attr("value");
+    const setImg = document.getElementById("setImg");
+    const subTitle = document.getElementById("subtitle");
 
-    document.getElementById("myModal").style.display = "block";
+    e.preventDefault();
+    $(".modal, .closeModal").fadeIn(300);
+    $(".modal").focus();
     setImg.src = nodes[spot].src;
     subTitle.innerHTML = nodes[spot].alt;
   })
 
-  $(".close").click(function() {
-    document.getElementById("myModal").style.display = "none";
+  $('.close').click(function() {
+    $(".modal, .closeModal").fadeOut(300);
   })
+
+  $(".closeModal").click(function() {
+    $(".modal, .closeModal").fadeOut(300);
+  })
+
 });

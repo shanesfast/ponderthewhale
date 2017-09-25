@@ -2,4 +2,7 @@
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
 
-@import "main";
+@import "../assets/CSS/_base/base-dir";
+@import "../assets/CSS/_layouts/layouts-dir";
+@import "../assets/CSS/_modules/modules-dir";
+@import "../assets/CSS/_plug-ins/plugins-dir";

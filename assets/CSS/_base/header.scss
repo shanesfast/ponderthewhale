@@ -1,0 +1,115 @@
+/* Header: Blue + Black bars */
+
+.blackbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3.0rem;
+  width: 100%;
+  background-color: #000;
+  animation: 1s ease-out 0s 1 theRightSlide;
+  z-index: 1;
+}
+
+.bluebar {
+  position: fixed;
+  top: 3.0rem;
+  left: 0;
+  height: 1.5rem;
+  width: 100%;
+  background-color: #68aadf;
+  box-shadow: 0 5px 8px 0 #2c3d45;
+  animation: 1s ease-out 0s 1 theLeftSlide;
+  z-index: 1;
+}
+
+/* Top navigation menu on black header bar */
+
+.linkbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  outline: none !important;
+  animation: 3s ease-in 0s 1 fadeIn;
+  z-index: 1;
+}
+
+.linkbar ul {
+  display: inline-block;
+  list-style: none;
+  outline: none !important;
+  width: 100%;
+  min-width: 350px;
+  margin-left: 0.5rem;
+  font-style: 'Ubuntu', sans-serif;
+  text-transform: uppercase;
+  font-size: 2rem;
+  color: rgb(205, 205, 215);
+}
+
+.linkbar li {
+  display: inline-block;
+  width: 15rem;
+  height: 3rem;
+  margin-right: 2.0rem;
+  outline: none !important;
+  font-family: 'Ubuntu', sans-serif;
+  cursor: pointer;
+}
+
+.linkbar li:hover {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  background-color: rgb(205, 205, 215);
+  color: #000;
+}
+
+.linkbar a {
+  text-decoration: none;
+  color: rgb(205, 205, 215);
+}
+
+.material-icons.arrow {
+  margin: -0.5rem 0;
+  font-size: 1.5rem;
+}
+
+/* Nested list for top drop-down navigation */
+
+.linkbar li ul {
+  position: absolute;
+  display: none;
+  min-width: 0;
+  margin: 0;
+  text-align: left;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.linkbar li ul li {
+  display: block;
+  width: 15rem;
+  margin: 0;
+  padding-left: 1rem;
+  background-color: #000;
+  box-shadow: none;
+  text-transform: none;
+}
+
+.linkbar li ul li:hover {
+  font-size: 1.8rem;
+  line-height: 2.8rem;
+  border-right: 0.5rem solid rgb(205, 205, 215);
+  border-left: 0.5rem solid rgb(205, 205, 215);
+  background-color: #000;
+  color: rgb(205, 205, 215);
+}
+
+#dropdown_roundend {
+  height: 1rem;
+  font-size: 0.5rem;
+  text-transform: none;
+  border-radius: 0 0 10px 10px;
+  background-color: rgb(205, 205, 215);
+  color: rgb(205, 205, 215);
+}

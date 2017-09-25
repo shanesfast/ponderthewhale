@@ -28,7 +28,6 @@ github: [metadata]
 markdown: kramdown
 plugins:
   - jekyll-feed
-  - indent_filter
 
 
 # Exclude from processing.

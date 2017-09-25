@@ -1,0 +1,74 @@
+/* The Modal */
+
+.modal {
+  display: none;
+  position: fixed;
+  left: 5%;
+  right: 5%;
+  top: 5%;
+  bottom: 5%;
+  width: 90%;
+  height: 90%;
+  padding-top: 5rem;
+  overflow: auto;
+  font-family: 'Ubuntu', sans-serif;
+  background-color: rgba(215, 215, 225, 0.9);
+  z-index: 2;
+}
+
+.modal p {
+  margin: 0 auto;
+  min-width: 20rem;
+  max-width: 60%;
+  text-align: center;
+  line-height: 5rem;
+  color: rgb(5, 5, 15);
+}
+
+.modal img {
+  display: block;
+  margin: 0 auto;
+  max-height: 50rem;
+  width: auto;
+  border: 2px solid rgb(5, 5, 15);
+  border-radius: 10px;
+  transition: 0.3s;
+  cursor: default;
+  background-color: rgb(256, 256, 256,);
+}
+
+.modal img:hover {
+  opacity: 1;
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  margin: auto;
+  padding: 0;
+  width: 90%;
+}
+
+/* The Close Button and DIV*/
+.close {
+  color: rgb(5, 5, 15);
+  margin: 0 auto;
+  font-size: 1.5rem;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.closeModal {
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
