@@ -29,6 +29,13 @@ markdown: kramdown
 plugins:
   - jekyll-feed
 
+sass:
+    load_paths:
+        - _sass
+        - _sass/_base
+        - _sass/_layouts
+        - _sass/_modules
+        - _sass/_plug-ins
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
