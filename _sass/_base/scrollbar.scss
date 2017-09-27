@@ -1,0 +1,15 @@
+.infocontent::-webkit-scrollbar-track
+{
+	position: absolute;
+}
+
+.infocontent::-webkit-scrollbar
+{
+	width: 5px;
+}
+
+.infocontent::-webkit-scrollbar-thumb
+{
+  height: 1rem;
+	display: none;
+}

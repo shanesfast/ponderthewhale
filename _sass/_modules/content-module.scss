@@ -146,7 +146,78 @@
   font-family: 'Baloo Tammudu', cursive;
   font-size: 4rem;
   color: rgb(205, 205, 215);
+
+  h2 {
+    opacity: 0;
+    animation: 3s ease-in 2s 1 fadeIn forwards, greetingSlideUp 2s ease-out 2s 1;
+  }
+
+  p {
+    opacity: 0;
+    animation: 3s ease-in 4s 1 fadeIn forwards;
+  }
+
 }
+
+.flipImg {
+  display: block;
+  margin: 0 auto 2% auto;
+  width: 60rem;
+  height: 30rem;
+  min-width: 20rem;
+  border-radius: 10px;
+  cursor: pointer;
+  @include transform-style(preserve-3d);
+  @include transition(0.5s);
+  @include transform (none);
+  animation: 6s ease-out 0s 1 dropDownBounce;
+
+    .front {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+      @include photo-content (humpback-1209297_1920);
+    }
+
+    .back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+      background-color: rgb(205, 205, 215);
+      @include transform (rotatey(180deg));
+      @include backface-visibility;
+
+      span {
+        position: absolute;
+        top: 2rem;
+        left: 5%;
+        right: 5%;
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+        color: #000;
+      }
+    }
+
+    .textOverlay {
+      position: absolute;
+      width: 50rem;
+      height: 30rem;
+      @include backface-visibility;
+      z-index: 1;
+
+      b {
+        position: absolute;
+        top: 2rem;
+        left: 0.5rem;
+        opacity: 0;
+        animation: 3s ease-in 12s 1 fadeIn forwards;
+      }
+    }
+}
+
+
 
 /* to resize the image on the taxonomy page */
 

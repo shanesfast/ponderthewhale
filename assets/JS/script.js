@@ -66,7 +66,7 @@ $(document).ready(function() {
     subTitle.innerHTML = nodes[spot].alt;
   })
 
-  $('.close').click(function() {
+  $(".close").click(function() {
     $(".modal, .closeModal").fadeOut(300);
   })
 
@@ -74,4 +74,36 @@ $(document).ready(function() {
     $(".modal, .closeModal").fadeOut(300);
   })
 
+});
+
+/* IMAGE FLIPPER */
+
+/* flips the welcome image */
+
+$(document).ready(function() {
+  $(".flipImg").click(function() {
+
+    const emptyMultiBrowser = {
+      "transform": "",
+      "-webkit-transform": "",
+      "-moz-transform": "",
+      "-ms-transform": "",
+      "-o-transform": ""
+    };
+
+    const multiBrowser = {
+      "transform": "rotatey(-180deg)",
+      "-webkit-transform": "rotatey(-180deg)",
+      "-moz-transform": "rotatey(-180deg)",
+      "-ms-transform": "rotatey(-180deg)",
+      "-o-transform": "rotatey(-180deg)"
+    };
+
+    if ($(this).css("transform") === 'none') {
+      $(this).css(multiBrowser);
+    } else {
+        $(this).css(emptyMultiBrowser);
+    };
+
+  });
 });
