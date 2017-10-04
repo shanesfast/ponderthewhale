@@ -120,7 +120,7 @@ $(document).ready(function() {
     $('.js-accordion-trigger')
       .not($('.js-accordion-trigger').has($(e.target)))
       .children('.submenu')
-      .toggle();
+      .hide();
       e.stopImmediatePropagation();
   })
 });
