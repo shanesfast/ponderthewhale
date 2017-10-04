@@ -1,0 +1,100 @@
+
+/* TOP NAV BAR */
+
+@media only screen and (max-width: 700px) {
+
+  .blackbar {
+    visibility: hidden;
+  }
+
+  .leftBlackBar {
+    width: 15rem;
+    overflow: hidden;
+    background-color: #000;
+    transform: translateX(-12rem);
+    transition: all 0.25s linear;
+
+    &.is-open {
+      transform: translateX(0);
+    }
+  }
+
+  .bluebar {
+    top: 0;
+    left: 3rem;
+    height: 100%;
+    width: 1.5rem;
+    box-shadow: 0 5px 8px 0 #2c3d45;
+    transition: all 0.25s linear;
+    animation: 1s ease-out 0s 1 theLeftSlide;
+    z-index: 3;
+
+    &.is-open {
+      transform: translateX(12rem);
+    }
+  }
+
+  .linkbar {
+    position: relative;
+    display: block;
+    visibility: hidden;
+    left: -5%;
+    height: 100%;
+    width: 1%;
+    min-width: 15rem;
+    margin-left: 0;
+    font-size: 2rem;
+
+    li {
+      width: 15rem;
+      height: 3rem;
+      margin-right: 0;
+      border: {
+        bottom: 2px solid rgb(205, 205, 215);
+      }
+
+      ul {
+        position: relative;
+        top: 7px;
+        border: none;
+        font-size: 1.6rem;
+        }
+      }
+
+    &.is-open {
+      visibility: visible;
+    }
+  }
+
+  .menu-out-arrow {
+    visibility: visible;
+    position: relative;
+    top: 30px;
+    border: solid 2px #d7d7e1;
+    border-radius: 30px;
+    background-color: #000;
+    box-shadow: 0 0 10px 1px #000;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.25s linear;
+
+    &.menu-out-arrow-flip {
+      transform: rotateY(180deg);
+    }
+  }
+
+  .close-side-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    background-color: #000;
+    opacity: 0.3;
+    z-index: 1;
+
+    &.is-open {
+      display: block;
+      height: 100%;
+      width: 100%;
+    }
+  }
+}

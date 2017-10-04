@@ -1,20 +1,21 @@
 <header>
   <div class="blackbar"></div>
-  <div class="bluebar"></div>
-  <div class="linkbar">
-    <ul>
+  <div class="leftBlackBar">
+    <ul class="linkbar">
       <a href="#" class="to_welcome"><li>Home</li></a>
-      <li class="facts" tabindex="0">Info<i class="material-icons arrow">keyboard_arrow_up</i>
-        <ul class="factsdropdown">
-          <a href="#" class="to_taxonomy"><li>Taxonomy</li></a>
-          <a href="#" class="to_cetacea"><li>Cetacea</li></a>
-          <a href="#" class="to_mysticeti"><li>Mysticeti</li></a>
-          <a href="#" class="to_odontoceti"><li>Odontoceti</li></a>
-          <li id='dropdown_roundend'>Easteregg c:</li>
+      <li class="js-accordion-trigger" tabindex="0">Info<i class="material-icons arrow">keyboard_arrow_up</i>
+        <ul class="submenu" tabindex="1">
+          <a href="#" class="to_taxonomy shut-menu"><li>Taxonomy</li></a>
+          <a href="#" class="to_cetacea shut-menu"><li>Cetacea</li></a>
+          <a href="#" class="to_mysticeti shut-menu"><li>Mysticeti</li></a>
+          <a href="#" class="to_odontoceti shut-menu"><li>Odontoceti</li></a>
         </ul>
       </li>
       <a href="#"><li>Links</li></a>
       <a href="#"><li>About</li></a>
     </ul>
   </div>
+  <div class="bluebar"></div>
+  <i class="material-icons menu-out-arrow">keyboard_arrow_right</i>
+  <div class="close-side-menu"></div>
 </header>

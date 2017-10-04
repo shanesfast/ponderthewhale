@@ -2,51 +2,41 @@
 
 // loads the welcome content
 $(document).ready(function() {
-  $(".to_welcome").click(function() {
+  $(".to_welcome").click(function(e) {
     $(".content").load("welcome.html");
-    } );
+    e.preventDefault();
+    })
 });
 
 // loads the taxonomy facts section
 $(document).ready(function() {
-  $(".to_taxonomy").click(function() {
+  $(".to_taxonomy").click(function(e) {
     $(".content").load("taxonomy.html");
-    });
+    e.preventDefault();
+    })
 });
 
 // loads the cetacea order content
 $(document).ready(function() {
-  $(".to_cetacea").click(function() {
+  $(".to_cetacea").click(function(e) {
     $(".content").load("cetacea.html");
-    });
+    e.preventDefault();
+    })
 });
 
 // loads the mysticeti content
 $(document).ready(function() {
-  $(".to_mysticeti").click(function() {
+  $(".to_mysticeti").click(function(e) {
     $(".content").load("mysticeti.html");
-    });
+    e.preventDefault();
+    })
 });
 
 // loads the odontoceti content
 $(document).ready(function() {
-  $(".to_odontoceti").click(function() {
+  $(".to_odontoceti").click(function(e) {
     $(".content").load("odontoceti.html");
-    });
-});
-
-/* HTML REPLACEMENT ON CLOCK/HOVER */
-
-/* replaces the up arrow next to FACTS with a down */
-$(document).ready(function() {
-  $(".facts")
-    .click(function() {
-      $(".material-icons.arrow").html("keyboard_arrow_down");
-      $(".factsdropdown").fadeIn(300);
-    })
-    .mouseleave(function() {
-      $(".material-icons.arrow").html("keyboard_arrow_up");
-      $(".factsdropdown").fadeOut();
+    e.preventDefault();
     })
 });
 
@@ -59,29 +49,30 @@ $(document).ready(function() {
     const setImg = document.getElementById("setImg");
     const subTitle = document.getElementById("subtitle");
 
-    e.preventDefault();
     $(".modal, .closeModal").fadeIn(300);
     $(".modal").focus();
     setImg.src = nodes[spot].src;
     subTitle.innerHTML = nodes[spot].alt;
+    e.preventDefault();
   })
 
-  $(".close").click(function() {
+  $(".close").click(function(e) {
     $(".modal, .closeModal").fadeOut(300);
+    e.preventDefault();
   })
 
-  $(".closeModal").click(function() {
+  $(".closeModal").click(function(e) {
     $(".modal, .closeModal").fadeOut(300);
+    e.preventDefault();
   })
 
 });
 
 /* IMAGE FLIPPER */
 
-/* flips the welcome image */
-
+// flips the welcome image
 $(document).ready(function() {
-  $(".flipImg").click(function() {
+  $(".flipImg, .imgVis").click(function(e) {
 
     const emptyMultiBrowser = {
       "transform": "",
@@ -105,5 +96,41 @@ $(document).ready(function() {
         $(this).css(emptyMultiBrowser);
     };
 
+    e.preventDefault();
+  });
+});
+
+/* MENU HIDE/SHOW FUNCTIONs */
+
+// hides/shows drop-down menu in linkbar, toggles up/down arrow next to INFO
+$(document).ready(function() {
+  $('.js-accordion-trigger').bind('click', function(e){
+    if ($(".material-icons.arrow").html() === "keyboard_arrow_down") {
+      $(".material-icons.arrow").html("keyboard_arrow_up");
+    } else {
+      $(".material-icons.arrow").html("keyboard_arrow_down");
+    }
+
+    $('.close-drop-menu').focus();
+    jQuery('.submenu').slideToggle('fast');
+    e.stopImmediatePropagation();
+  })
+
+  $(document).click(function(e) {
+    $('.js-accordion-trigger')
+      .not($('.js-accordion-trigger').has($(e.target)))
+      .children('.submenu')
+      .toggle();
+      e.stopImmediatePropagation();
+  })
+});
+
+// hides/shows the side menu for screens < 700px wide
+$(document).ready(function() {
+  $('.menu-out-arrow, .close-side-menu, .submenu').bind('click', function(e) {
+    $('.menu-out-arrow').toggleClass('menu-out-arrow-flip');
+    $('.leftBlackBar, .bluebar, .linkbar, .close-side-menu').toggleClass('is-open');
+    e.preventDefault();
+    e.stopImmediatePropagation();
   });
 });
