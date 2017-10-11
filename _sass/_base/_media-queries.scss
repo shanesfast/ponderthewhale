@@ -11,7 +11,7 @@
     width: 15rem;
     overflow: hidden;
     background-color: #000;
-    transform: translateX(-12rem);
+    transform: translateX(-15rem);
     transition: all 0.25s linear;
 
     &.is-open {
@@ -26,7 +26,8 @@
     width: 1.5rem;
     box-shadow: 0 5px 8px 0 #2c3d45;
     transition: all 0.25s linear;
-    animation: 1s ease-out 0s 1 theLeftSlide;
+    transform: translateX(-6rem);
+    animation: none;
     z-index: 3;
 
     &.is-open {
