@@ -156,7 +156,8 @@ $flipImgWidth: 50rem;
 
   h2 {
     margin: {
-      top: 5%;
+      top: 8%;
+      bottom: 1rem;
     }
     line-height: 35px;
     opacity: 0;
@@ -164,7 +165,7 @@ $flipImgWidth: 50rem;
   }
 
   p {
-    margin: 0 auto 2% auto;
+    margin: 0 auto 2rem auto;
     width: 80%;
     min-width: 15rem;
     max-width: 60rem;
