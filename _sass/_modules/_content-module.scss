@@ -148,16 +148,18 @@ $flipImgWidth: 50rem;
 /// welcome message on home page
 
 .welcome {
-  margin: 0 auto;
+  height: 100%;
+  width: 100%;
   min-width: 30rem;
+  margin: 0 auto;
+  padding: 20px;
   font-family: 'Baloo Tammudu', cursive;
   font-size: 4rem;
   color: rgb(205, 205, 215);
 
   h2 {
     margin: {
-      top: 8%;
-      bottom: 1rem;
+      top: 5%;
     }
     line-height: 35px;
     opacity: 0;
@@ -165,12 +167,12 @@ $flipImgWidth: 50rem;
   }
 
   p {
-    margin: 0 auto 2rem auto;
+    margin: 0 auto;
     width: 80%;
     min-width: 15rem;
-    max-width: 60rem;
     text-align: justify;
-    line-height: 2rem;
+    line-height: 2.5rem;
+    font-size: 3rem;
     font-family: 'Ubuntu', sans-serif;
     color: rgb(205, 205, 215);
     opacity: 0;
@@ -181,9 +183,9 @@ $flipImgWidth: 50rem;
 
 .flipImg {
   display: block;
-  margin: 2% auto 0 auto;
-  height: $flipImgHeight;
-  width: $flipImgWidth;
+  margin: 1% auto 0 auto;
+  height: 60%;
+  width: 100%;
   border-radius: 10px;
   cursor: pointer;
   @include transform-style(preserve-3d);
@@ -193,8 +195,8 @@ $flipImgWidth: 50rem;
 
     .front {
       position: absolute;
-      width: $flipImgWidth;
-      height: $flipImgHeight;
+      width: 100%;
+      height: 100%;
       border-radius: 10px;
       @include photo-content (humpback-1209297_1920);
 
@@ -222,24 +224,18 @@ $flipImgWidth: 50rem;
         color: #000;
       }
     }
+}
 
-    .textOverlay {
-      position: absolute;
-      width: 50rem;
-      height: 30rem;
-      @include backface-visibility;
-      pointer-events: none;
-      z-index: 2;
+.textOverlay {
+  top: -20px;
+  @include backface-visibility;
+  z-index: 2;
 
-      b {
-        visibility: visible;
-        position: absolute;
-        top: 3.4rem;
-        left: 0.5rem;
-        opacity: 0;
-        animation: 3s ease-in 12s 1 fadeIn forwards;
-      }
-    }
+  b {
+    visibility: visible;
+    opacity: 0;
+    animation: 3s ease-in 12s 1 fadeIn forwards;
+  }
 }
 
 /* to resize the image on the taxonomy page */

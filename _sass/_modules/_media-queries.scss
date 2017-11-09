@@ -5,31 +5,13 @@
     font-size: 3.2rem;
   }
 
-  .welcome{
-    h2 {
+  .welcome, .textOverlay{
+    h2, b {
       font-size: 5rem;
     }
 
     p {
       font-size: 1.8rem;
-    }
-  }
-
-  .flipImg {
-    height: 30rem;
-    width: 45rem;
-
-    .front {
-      height: 30rem;
-      width: 45rem;
-    }
-
-    .textOverlay {
-
-      b {
-        top: 4.5rem;
-        font-size: 3.6rem;
-      }
     }
   }
 }
@@ -55,8 +37,8 @@
     }
   }
 
-  .welcome{
-    h2 {
+  .welcome, .textOverlay{
+    h2, b {
       font-size: 4rem;
     }
 
@@ -64,29 +46,11 @@
       font-size: 1.6rem;
     }
   }
-
-  .flipImg {
-    height: 30rem;
-    width: 40rem;
-
-    .front {
-      height: 30rem;
-      width: 40rem;
-    }
-
-    .textOverlay {
-
-      b {
-        top: 5.2rem;
-        font-size: 3rem;
-      }
-    }
-  }
 }
 
 @media only screen and (max-width: 735px) {
-  .welcome{
-    h2 {
+  .welcome, .textOverlay{
+    h2, b {
       font-size: 3rem;
     }
 
@@ -94,55 +58,19 @@
       font-size: 1.4rem;
     }
   }
-
-  .flipImg {
-    height: 30rem;
-    width: 35rem;
-
-    .front {
-      height: 30rem;
-      width: 35rem;
-    }
-
-    .textOverlay {
-
-      b {
-        top: 5.4rem;
-        font-size: 2.8rem;
-      }
-    }
-  }
 }
 
 @media only screen and (max-width: 660px) {
-  .welcome{
+  .welcome {
     min-width: 26rem;
 
-    h2 {
+    h2, .textOverlay b {
       font-size: 2.5rem;
     }
 
     p {
       font-size: 1.2rem;
       line-height: 1.3rem;
-    }
-  }
-
-  .flipImg {
-    height: 30rem;
-    width: 30rem;
-    margin: 4% auto 0 auto;
-
-    .front {
-      height: 30rem;
-      width: 30rem;
-    }
-
-    .textOverlay {
-
-      b {
-        top: 5.5rem;
-      }
     }
   }
 }
@@ -168,33 +96,15 @@
     }
   }
 
-  .welcome{
+  .welcome {
     min-width: 24rem;
 
-    h2 {
+    h2, .textOverlay b {
       font-size: 2rem;
     }
 
     p {
       font-size: 1rem;
-    }
-  }
-
-  .flipImg {
-    height: 20rem;
-    width: 20rem;
-
-    .front {
-      height: 20rem;
-      width: 20rem;
-    }
-
-    .textOverlay {
-
-      b {
-        top: 4rem;
-        font-size: 1.5rem;
-      }
     }
   }
 }
